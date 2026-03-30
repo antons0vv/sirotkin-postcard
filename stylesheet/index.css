@@ -1,0 +1,160 @@
+@font-face {
+  font-family: 'JRN55';
+  src: url('../JRN55.otf') format('opentype');
+}
+
+:root {
+  --bg:   #ffffff;
+  --ink:  #111111;
+  --muted: #888888;
+  --rule: #cccccc;
+  --font: 'JRN55', serif;
+}
+
+body {
+  background: var(--bg);
+  height: 100vh;
+  overflow: hidden;
+  font-family: var(--font);
+  color: var(--ink);
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+#controls-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100%;
+  max-width: 520px;
+  padding: 48px 56px;
+  text-align: center;
+}
+
+#header {
+  font-size: 20px;
+  color: var(--muted);
+}
+
+#form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.field {
+  margin-bottom: 38px;
+  width: 100%;
+}
+
+.label {
+  font-size: 32px;
+  margin-bottom: 6px;
+  color: var(--ink);
+  text-align: center;
+}
+
+input[type="text"] {
+  font-family: var(--font);
+  font-size: 32px;
+  color: var(--ink);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--rule);
+  outline: none;
+  width: 100%;
+  padding: 2px 0 4px;
+  text-align: center;
+}
+
+input[type="text"]::placeholder {
+  color: var(--rule);
+}
+
+#year-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+}
+
+input[type="number"] {
+  font-family: var(--font);
+  font-size: 32px;
+  color: var(--ink);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--rule);
+  outline: none;
+  width: 80px;
+  padding: 2px 0 4px;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"]::placeholder {
+  color: var(--rule);
+}
+
+#year-dash {
+  font-size: 20px;
+  color: var(--muted);
+  letter-spacing: 4px;
+}
+
+#status {
+  font-size: 15px;
+  color: var(--muted);
+  min-height: 20px;
+  margin-bottom: 16px;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+#search-btn {
+  font-family: var(--font);
+  font-size: 32px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  color: var(--ink);
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+  transition: opacity 0.15s;
+}
+
+#search-btn:hover {
+  opacity: 0.6;
+}
+
+#search-btn:disabled {
+  color: var(--rule);
+  cursor: default;
+  text-decoration-color: var(--rule);
+}
+
+#footer {
+  font-size: 20px;
+  color: var(--muted);
+  text-align: center;
+}
