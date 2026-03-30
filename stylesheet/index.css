@@ -36,11 +36,13 @@ body {
   max-width: 520px;
   padding: 48px 56px;
   text-align: center;
+  margin: 50px;
 }
 
 #header {
   font-size: 20px;
   color: var(--muted);
+  margin-top: 30px;
 }
 
 #form {
@@ -97,7 +99,6 @@ input[type="number"] {
   width: 80px;
   padding: 2px 0 4px;
   text-align: center;
-  -moz-appearance: textfield;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -132,9 +133,6 @@ input[type="number"]::placeholder {
   border: none;
   padding: 0;
   cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 1px;
   color: var(--ink);
   display: block;
   width: 100%;
@@ -144,7 +142,7 @@ input[type="number"]::placeholder {
 }
 
 #search-btn:hover {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 #search-btn:disabled {
@@ -157,4 +155,5 @@ input[type="number"]::placeholder {
   font-size: 20px;
   color: var(--muted);
   text-align: center;
+  margin-bottom: 30px;
 }
